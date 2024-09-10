@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect, useState} from "react"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.js'
+import { Outlet } from 'react-router-dom'
+import Navbar from './components/navbar'
+import Sidebar from './components/sidebar'
+import Footer from './components/footer'
 
-function App() {
+const App = () => {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isMobile,setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(()=>{
+    const handleResize =()=>{
+      setIsMobile(window.innerWidth < 768)
+      
+    };
+    window.addEventListener('resize',handleResize)
+    return()=>{
+      window.removeEventListener('resize',handleResize)
+    }
+  },[])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {isMobile ? (
+        <Sidebar  />
+      ) : (
+        <Navbar  />
+      )}
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default App
+
