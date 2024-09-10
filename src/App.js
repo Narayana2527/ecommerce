@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 // import { Outlet } from 'react-router-dom'
 import Navbar from './components/navbar'
 import Sidebar from './components/sidebar'
-// import Footer from './components/footer'
+import Footer from './components/footer'
 import Home from "./pages/home"
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
         )}
       </div>
       <Home />
-      
+      <Footer />
     </div>
   )
 }
