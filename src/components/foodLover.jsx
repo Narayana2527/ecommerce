@@ -1,4 +1,5 @@
 import React ,{useState,useEffect}from 'react'
+import { LuUtensilsCrossed } from "react-icons/lu";
 
 const FoodLover = () => {
     const [recipes, setRecipes] = useState([]);
@@ -45,7 +46,10 @@ const FoodLover = () => {
         <div className=' bg-menuBg my-3'>
             <div className="container">
           <div className='mt-3'>
-            <h1 className="text-center text-xl text-customGreen font-semibold py-3">Food Lover</h1>
+            <div className='pt-3 flex justify-center'>
+              <LuUtensilsCrossed className='text-center text-customGreen text-3xl font-semibold' />
+            </div>
+            <h1 className="text-center text-xl text-customGreen font-semibold py-2">Food Lover</h1>
             <h2 className='text-center text-3xl text-black font-extrabold py-2'>RESTURANT MENU</h2>
           </div>
           <div className="flex flex-col md:flex-row gap-2 justify-between md:gap-4 mt-3 md:mt-0">

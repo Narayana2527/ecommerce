@@ -1,5 +1,5 @@
 import React from 'react'
-import { CiMail,CiInstagram,CiFacebook } from "react-icons/ci"
+// import { CiMail,CiInstagram,CiFacebook } from "react-icons/ci"
 import { FaRegCopyright } from "react-icons/fa";
 import footer1 from '../assets/images1.jpg'
 import footer2 from '../assets/images2.jpg'

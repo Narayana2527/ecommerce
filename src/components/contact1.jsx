@@ -3,7 +3,7 @@ import { FaEnvelopeOpenText } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className='bg-customGreen bg-cover py-5'>
+    <div className='bg-customGreen bg-cover py-5' id='contact'>
         <div className='text-center'>
             <FaEnvelopeOpenText className='block mx-auto text-xl outline p-2 outline-2 outline-white rounded-full w-12 h-12' />
             <h1 className='mt-2 text-2xl text-white'>Subscribe to our Newsletter</h1>

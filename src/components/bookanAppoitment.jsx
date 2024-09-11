@@ -4,7 +4,7 @@ import bookingImage from '../assets/appointmentBackgroundImage.jpg';
 
 const Booking = () => {
   return (
-    <div 
+    <div id='reservation'
       className="grid grid-cols-12 h-[500px] bg-cover bg-center" 
       style={{ backgroundImage: `url(${bookingImage})` }}
     >

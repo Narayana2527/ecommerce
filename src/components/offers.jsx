@@ -5,7 +5,7 @@ import offer1 from '../assets/offerImage.jpg'
 import offer2 from '../assets/offerImage2.jpg'
 import offer3 from '../assets/offerImage3.jpg'
 import offer4 from '../assets/offerImage4.webp'
-
+import { LuUtensilsCrossed } from "react-icons/lu";
 
 const Offer = () => {
   return (
@@ -17,7 +17,7 @@ const Offer = () => {
         <div className='mt-5 card shadow outline-none border-none rounded-3xl p-2'>
             <div className='flex justify-evenly'>
                 <div className='block my-auto'>
-                    <img src={fishCurry} className='w-20 h-20 rounded-full' />
+                    <img src={fishCurry} alt='description' className='w-20 h-20 rounded-full' />
                 </div>
                 <div>
                     <h3 className='text-2xl text-customGreen'>Fish Curry</h3>
@@ -34,7 +34,7 @@ const Offer = () => {
         <div className='mt-4 card shadow rounded-3xl p-2'>
             <div className='flex justify-evenly '>
                 <div className='block my-auto'>
-                    <img src={fishCurry1} className='w-20 h-20 rounded-full' />
+                    <img src={fishCurry1} alt='description' className='w-20 h-20 rounded-full' />
                 </div>
                 <div>
                     <h3 className='text-2xl text-customGreen'>Fish Curry</h3>
@@ -49,22 +49,25 @@ const Offer = () => {
             </div>            
         </div>
       </div>
-      <div className='lg:col-span-6 col-span-12 md:col-span-6 p-4'>
-        <div className='grid grid-cols-2 gap-2 md:gap-4'>
+      <div className='lg:col-span-6 col-span-12 md:col-span-6 p-4 relative'>
+        <div className='grid grid-cols-2 gap-2 md:gap-4 '>
             <div>
-                <img src={offer1} className='w-70 h-60' />
+                <img src={offer1} alt='description' className='w-70 h-60' />
             </div>
             <div>
-                <img src={offer2} className='w-70 h-60' />
+                <img src={offer2} alt='description' className='w-70 h-60' />
             </div>
         </div>
         <div className='grid grid-cols-2 gap-2 md:gap-4  mt-2'>
             <div>
-                <img src={offer3} className='w-70 h-60' />
+                <img src={offer3} alt='description' className='w-70 h-60' />
             </div>
             <div>
-                <img src={offer4} className='w-70 h-60' />
+                <img src={offer4} alt='description' className='w-70 h-60' />
             </div>
+        </div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-offerIcon rounded-full w-[90px] h-[90px] outline outline-6 outline-white'>
+            <LuUtensilsCrossed className='text-white text-4xl flex justify-center items-center ms-4 mt-4'/>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import aboutImage from '../assets/bImage.png'
 
 const HomeAbout = () => {
   return (
-    <div className='my-5 bg-white py-2'>
+    <div className='my-5 bg-white py-2' id='about'>
       <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 my-5'>
         <div className='px-4'>
             <hr className='w-[60px] h-1 bg-red-950' />

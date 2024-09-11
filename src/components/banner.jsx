@@ -12,7 +12,7 @@ const Banner = () => {
                 Order from a weekly menu of tasty meals at theclick of a 
                 button. say goodbye to meal planning and grocery shopping!
             </p>
-            <div className='flex'>
+            <div className='flex mt-3'>
               <button className='w-[140px] bg-orange-600 text-white text-sm px-3 py-2'>
                   Book Table
               </button>
