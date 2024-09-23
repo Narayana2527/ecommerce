@@ -13,7 +13,7 @@ const Sidebar = ({ isLoggedIn, handleLogout }) => {
         <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
             <div className="sidebar-header ">
                 <FiMenu onClick={toggleSidebar} className="menu-icon d-inline w-12 h-12 flex items-center" />
-                <span className="logo text-2xl font-serif">Food Lover</span>
+                <span className="logo text-3xl font-serif ms-3">Food Lover</span>
             </div>
             <ul className={`sidenav-links ps-3 ${isOpen ? 'show' : 'hide'}`}>
                 <li><a href="#home">HOME</a></li>

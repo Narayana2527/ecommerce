@@ -7,15 +7,15 @@ import { FiUsers } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa"; 
 const Blog = () => {
   return (
-    <div id='blog' className='bg-cover bg-center block mx-auto' style={{backgroundImage:`url(${blogBackground})`}}>
+    <div id='blog' className='bg-cover bg-center block mx-auto container-fluid' style={{backgroundImage:`url(${blogBackground})`}}>
         <div className='container py-5'>
             <div className=''>
                 <FiUsers className='block mx-auto text-customGreen w-12 h-12' />
                 <h1 className='text-xl text-customGreen text-center mt-2'>Food Lover</h1>
                 <h2 className='mt-2 text-3xl text-white font-extrabold text-center'>CUSTOMER FEEDBACK</h2>
             </div>
-            <div className='grid grid-cols-1  md:grid-cols-3 gap-4 mt-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide'>
-                <div className='w-full md:w-70 lg:w-70 md:h-70 p-4 flex-shrink-0 snap-center'>
+            <div className='flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 mt-3'>
+                <div className='min-w-[100%] md:min-w-[45%] lg:min-w-[30%] p-4 snap-center'>
                     <div className='card rounded-xl z-10 opacity-60 bg-bgBlogCard'>
                         <div className='card-body'>
                             <div className='flex justify-end'>
@@ -31,7 +31,7 @@ const Blog = () => {
                             <img src={blog1} alt='description' className='w-20 h-20 rounded-full' />
                     </div>
                 </div>
-                <div className='w-full md:w-70 p-4 flex-shrink-0 snap-center'>
+                <div className='min-w-[100%] md:min-w-[45%] lg:min-w-[30%] p-4 snap-center'>
                     <div className='card rounded-xl z-10 opacity-60 bg-bgBlogCard'>
                         <div className='card-body'>
                             <div className='flex justify-end'>
@@ -46,7 +46,7 @@ const Blog = () => {
                             <img src={blog2} alt='description' className='w-20 h-20 rounded-full' />
                     </div>
                 </div>
-                <div className='w-full md:w-70 flex-shrink-0 snap-center p-4'>
+                <div className='min-w-[100%] md:min-w-[45%] lg:min-w-[30%] p-4 snap-center'>
                     <div className='card rounded-xl z-10 opacity-60 bg-bgBlogCard'>
                         <div className='card-body'>
                             <div className='flex justify-end'>

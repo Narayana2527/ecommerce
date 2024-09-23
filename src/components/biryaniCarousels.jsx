@@ -40,15 +40,17 @@ const ChickenRecipesSlider = () => {
       {
         breakpoint: 768, // Mobile View
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 1000,
-          dots: false,
+          dots: true,
         },
       },
     ],
     customPaging: function (i) {
+      const dotsCount = Math.ceil(recipes.length / settings.slidesToShow);
+      if (i >= dotsCount) ; // Limit the number of dots
       return (
         <div
           style={{
@@ -62,10 +64,21 @@ const ChickenRecipesSlider = () => {
         ></div>
       );
     },
+    appendDots: dots => (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "10px",
+        }}
+      >
+        {dots.slice(0, 4)} {/* Limit to 4 dots for laptop view */}
+      </div>
+    ),
   };
 
   return (
-    <div className="container mx-auto bg-white my-4">
+    <div className="container mx-auto bg-white py-4">
       <h1 className='flex items-center justify-center text-customGreen font-semibold text-xl mt-1'>Deal's Today</h1>
       <h2 className='text-3xl text-black flex items-center font-extrabold justify-center mt-1'>TODAY SPECIAL DISH</h2>
       <Slider {...settings}>
